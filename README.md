@@ -33,7 +33,9 @@ Yaroslav Slipchuk
 
 ### Installation
 
-todo
+```
+yarn add llrp-ts
+```
 
 ### Config
 
@@ -43,17 +45,13 @@ ipaddress - IP of the RFID reader (default 192.168.0.30)
 
 port - port of the RFID reader (default 5084)
 
-log - log messages in the console (default false)
-
-isReaderConfigSet - is the reader config set (default false)
-
-isStartROSpecSent - has START_ROSPEC message been sent to the reader (default false)
+and radio operation configuration according to the llrp protocol https://www.gs1.org/standards/epc-rfid/llrp/1-1-0
 
 ### Methods
 
-connect()
-disconnect()
-disableRFTransmitter()
+connect(),
+disconnect(),
+disableRFTransmitter(),
 enableRFTransmitter()
 
 ### Example
