@@ -1,64 +1,3 @@
-# llrp-ts
-Tag reader for connecting with RFID reader through LLRP(LLRP UHF RFID Driver for node.js/TypeScript)
-
-==========
-
-llrp protocol implementation
-
-Nodejs module to read RFID tags by connecting to a RFID reader through LLRP protocol.
-
-## Version history
-
-v.0.0.1 - version based on https://github.com/GeenenTijd/llrp-nodejs 
-
-v.0.0.2 - Code refactoring. Add Impinj Specific message for  AddRoSpec. Add close connection public method. Add parsing for AntennaID, PeakRSSI, LastSeenTimestampUTC.
-
-v.0.0.3 - Code refactoring. Add llrp message creator. Fixed bugs in endode.js. Add received EPC96 or EPC numbers. Add disableRFTransmitter and enableRFTransmitter methods.
-
-v.0.0.4 - Converted code to TypeScript. Add unit tests.
-
-v.0.0.5 - Add reading of TID number. 
-
-v.0.0.6 - Add configuration for antennas number.  
-
-v.0.0.7 - Add antenna power configuration.  
-
-v.0.0.8 - Fix sending command when socket is closed.
-
-v.0.0.9 - Add radio transmitter on/off commands and events.  
-
-### Authors
-
-Yaroslav Slipchuk
-
-### Installation
-
-todo
-
-### Config
-
-You can provide a config object with the following values:
-
-ipaddress - IP of the RFID reader (default 192.168.0.30) 
-
-port - port of the RFID reader (default 5084)
-
-log - log messages in the console (default false)
-
-isReaderConfigSet - is the reader config set (default false)
-
-isStartROSpecSent - has START_ROSPEC message been sent to the reader (default false)
-
-### Methods
-
-connect()
-disconnect()
-disableRFTransmitter()
-enableRFTransmitter()
-
-### Example
-
-```
 import { LLRP, RfidReaderEvent } from './index';
 
 import { ReaderConfig, TagInformation } from './interfaces/llrp';
@@ -171,5 +110,3 @@ process.on('unhandledRejection', () => {
     console.log('unhandledRejection');
     normalExit();
 });
-
-```
